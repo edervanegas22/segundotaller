@@ -1,0 +1,34 @@
+<header>
+    <h1>Centro medico Backend</h1>
+</header>
+<main>
+    <h2>Listado pacientes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Número de Cédula</th>
+                <th>Fecha de nacimiento</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-pacientes">
+            <!-- Se agrega el contenido dinamicamente por medio de JS -->
+            {{#each resultado}}
+            <tr>
+                <td>{{nombres}}</td>
+                <td>{{apellidos}}</td>
+                <td>{{cedula}}</td>
+                <td>{{fecha_nacimiento}}</td>
+                <td>{{telefono}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <a href="../index.html"><input type="button" value="Volver"></a>
+</main>
+<footer>
+    <h2>Realizado por:</h2>
+    <p>Grupo 1 desarrollo web backend</p>
+</footer>
