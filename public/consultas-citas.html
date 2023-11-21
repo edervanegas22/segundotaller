@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas especialidades</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Centro médico Backend</h1>
+    </header>
+    <main>
+        <h2>Consulta de citas medicas</h2>
+        <div class="container-form">
+            <form method="post" action="/consulta-cita">
+                <label for="especialidad">Especialidad:</label>
+                <select name="especialidad" id="especialidad" required>
+                    <option value="">----------Seleccione una opcion-----------</option>
+                    <option value="Medicina general">Medicina general</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Medicina interna">Medicina interna</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Rehabilitación física">Rehabilitación física</option>
+                    <option value="Psicología">Psicología</option>
+                    <option value="Odontología">Odontología</option>
+                    <option value="Radiología">Radiología</option>
+                </select>
+                <input type="submit" value="Consultar">
+            </form>
+            <a href="../index.html"><input type="button" value="Volver"></a>
+        </div>
+    </main>
+    <footer>
+        <h2>Realizado por:</h2>
+        <p>Grupo 1 desarrollo web backend</p>
+    </footer>
+</body>
+</html>

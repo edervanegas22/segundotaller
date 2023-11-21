@@ -70,4 +70,17 @@ router.post('/agregar-paciente', (req, res) => {
   })
 })
 
+router.post('/consulta-cita', (req, res) => {
+  const especialidad = req.body.especialidad
+  
+  conexion.query(`SELECT * FROM medicos WHERE especialidad='${especialidad}';`, (error, resultado) => {
+    if (error) {
+      console.log(error)
+      res.status(500).send('Ocurrio un error en la consulta')
+    } else {
+      res.status(200).render('agendar-citas', { resultado })
+    }
+  })
+})
+
 module.exports = router;
