@@ -4,12 +4,12 @@
 <main>
     <h2>Agendamiento de citas</h2>
     <div class="container-form">
-        <form>
+        <form method="post" action="/agregar-cita">
             <label for="cedula">Número de cedula:</label>
             <input type="number" id="cedula" name="cedula" required>
             <label for="fecha_cita">Fecha de cita medica:</label>
             <input type="date" id="fecha_cita" name="fecha_cita" required>
-            <label for="medico">Especialista:</label>
+            <label for="medico">Medico especialista:</label>
             <select name="medico" id="medico" required>
                 <option value="">----------Seleccione una opcion-----------</option>
                 {{#each resultado}}
