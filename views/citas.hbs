@@ -1,0 +1,36 @@
+<header>
+    <h1>Centro medico Backend</h1>
+</header>
+<main>
+    <h2>Listado citas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha cita</th>
+                <th>Paciente</th>
+                <th>Telefono paciente</th>
+                <th>Especialidad</th>
+                <th>Consultorio</th>
+                <th>Medico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Se agrega el contenido dinamicamente por medio de Handlebars -->
+            {{#each resultado}}
+            <tr>
+                <td>{{formatoFecha fecha_cita}}</td>
+                <td>{{nombres}} {{apellidos}}</td>
+                <td>{{telefono}}</td>
+                <td>{{especialidad}}</td>
+                <td>{{consultorio}}</td>
+                <td>{{nombresMedico}} {{apellidosMedico}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <a href="../index.html"><input type="button" value="Volver"></a>
+</main>
+<footer>
+    <h2>Realizado por:</h2>
+    <p>Grupo 1 desarrollo web backend</p>
+</footer>
